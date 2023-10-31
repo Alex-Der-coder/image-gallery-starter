@@ -82,6 +82,7 @@ export default function SharedModal({
                   priority
                   alt="Next.js Conf image"
                   onLoad={() => setLoaded(true)}
+                  unoptimized={true}
                 />
               </motion.div>
             </AnimatePresence>
