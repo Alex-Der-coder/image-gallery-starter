@@ -78,6 +78,7 @@ export default function Modal({
         changePhotoId={changePhotoId}
         closeModal={handleClose}
         navigation={true}
+        unoptimized={true}
       />
     </Dialog>
   )
