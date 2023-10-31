@@ -30,7 +30,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   return (
     <>
       <Head>
-        <title>Next.js Conf 2022 Photos</title>
+        <title>App photo </title>
         <meta
           property="og:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
@@ -130,7 +130,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         >
           Gary Sexton
         </a>{' '}
-        for the pictures.
+        for the Vercel template project.
       </footer>
     </>
   )
