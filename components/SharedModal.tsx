@@ -94,26 +94,23 @@ export default function SharedModal({
           {loaded && (
             <div className="relative aspect-[3/2] max-h-full w-full">
               {navigation && (
-                <>
-                  {index > 0 && (
-                    <button
-                      className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
-                      style={{ transform: 'translate3d(0, 0, 0)' }}
-                      onClick={() => changePhotoId(index - 1)}
-                    >
-                      <ChevronLeftIcon className="h-6 w-6" />
-                    </button>
-                  )}
-                  {index + 1 < images.length && (
-                    <button
-                      className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
-                      style={{ transform: 'translate3d(0, 0, 0)' }}
-                      onClick={() => changePhotoId(index + 1)}
-                    >
-                      <ChevronRightIcon className="h-6 w-6" />
-                    </button>
-                  )}
-                </>
+               <>
+               <button
+                 className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
+                 style={{ transform: 'translate3d(0, 0, 0)' }}
+                 onClick={() => changePhotoId(index - 1)}
+               >
+                 <ChevronLeftIcon className="h-6 w-6" />
+               </button>
+               
+               <button
+                 className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
+                 style={{ transform: 'translate3d(0, 0, 0)' }}
+                 onClick={() => changePhotoId(index + 1)}
+               >
+                 <ChevronRightIcon className="h-6 w-6" />
+               </button>
+             </>
               )}
               <div className="absolute top-0 right-0 flex items-center gap-2 p-3 text-white">
                 {navigation ? (

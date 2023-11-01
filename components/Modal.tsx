@@ -26,23 +26,36 @@ export default function Modal({
     router.push('/', undefined, { shallow: true })
     onClose()
   }
-
   function changePhotoId(newVal: number) {
-    if (newVal > index) {
-      setDirection(1)
-    } else {
-      setDirection(-1)
+    let newIndex = newVal;
+  
+    // Handle cycling to the end from the first photo
+    if (newIndex < 0) {
+      newIndex = images.length - 1;
     }
-    setCurIndex(newVal)
+  
+    // Handle cycling to the beginning from the last photo
+    if (newIndex >= images.length) {
+      newIndex = 0;
+    }
+  
+    if (newIndex > index) {
+      setDirection(1);
+    } else {
+      setDirection(-1);
+    }
+  
+    setCurIndex(newIndex);
     router.push(
       {
-        query: { photoId: newVal },
+        query: { photoId: newIndex },
       },
-      `/p/${newVal}`,
+      `/p/${newIndex}`,
       { shallow: true }
-    )
+    );
   }
-
+  
+  
   useKeypress('ArrowRight', () => {
     if (index + 1 < images.length) {
       changePhotoId(index + 1)
