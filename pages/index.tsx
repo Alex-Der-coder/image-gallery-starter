@@ -11,6 +11,8 @@ import cloudinary from '../utils/cloudinary'
 import getBase64ImageUrl from '../utils/generateBlurPlaceholder'
 import type { ImageProps } from '../utils/types'
 import { useLastViewedPhoto } from '../utils/useLastViewedPhoto'
+import Navbar from '../components/nav_bar'
+
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter()
@@ -41,6 +43,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
+        <Navbar/>
         {photoId && (
           <Modal
             images={images}
